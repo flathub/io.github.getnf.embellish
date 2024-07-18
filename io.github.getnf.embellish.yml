@@ -35,4 +35,8 @@ modules:
         url: https://github.com/getnf/embellish/archive/refs/tags/v0.2.4.tar.gz
         sha256: ebf9f3652bfb3fa92e65b0a1395b94ccbddcca4430370fbcc2efd83603a04010
 
+      - type: file
+        url: https://raw.githubusercontent.com/getnf/embellish/14f0cc954b86c74068749354d20ba5942bc02060/io.github.getnf.embellish.metainfo.xml
+        sha256: 94f40a37a846c355f79563c090f459a2f0403f74696bddc2c09c10c0ced40bc7
+
       - go.mod.yml
