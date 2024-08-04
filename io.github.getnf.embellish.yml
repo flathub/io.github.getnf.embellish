@@ -32,11 +32,11 @@ modules:
       - install -Dm644 $FLATPAK_ID.metainfo.xml /app/share/metainfo/$FLATPAK_ID.metainfo.xml
     sources:
       - type: archive
-        url: https://github.com/getnf/embellish/archive/refs/tags/v0.2.4.tar.gz
-        sha256: ebf9f3652bfb3fa92e65b0a1395b94ccbddcca4430370fbcc2efd83603a04010
+        url: https://github.com/getnf/embellish/archive/refs/tags/v0.3.0.tar.gz
+        sha256: 3696106a070ff052cefec08d71f11bccd1b24f27eab96f7a209b23b4247f34e8
 
       - type: file
-        url: https://raw.githubusercontent.com/getnf/embellish/14f0cc954b86c74068749354d20ba5942bc02060/io.github.getnf.embellish.metainfo.xml
-        sha256: 94f40a37a846c355f79563c090f459a2f0403f74696bddc2c09c10c0ced40bc7
+        url: https://raw.githubusercontent.com/getnf/embellish/875d8758bc407c35c5aa60d7e607b844411ca23d/io.github.getnf.embellish.metainfo.xml
+        sha256: c81e758f32ecc52f31cc1e3e240f5c9c8a4cd878cb8eb93940515c676369475b
 
       - go.mod.yml

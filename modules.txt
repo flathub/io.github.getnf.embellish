@@ -62,10 +62,10 @@ github.com/charmbracelet/x/term
 # github.com/charmbracelet/x/windows v0.1.2
 ## explicit; go 1.18
 github.com/charmbracelet/x/windows
-# github.com/diamondburned/gotk4-adwaita/pkg v0.0.0-20240512000724-8dc7455ee58f
+# github.com/diamondburned/gotk4-adwaita/pkg v0.0.0-20240712143708-824c3ce8a5f4
 ## explicit; go 1.18
 github.com/diamondburned/gotk4-adwaita/pkg/adw
-# github.com/diamondburned/gotk4/pkg v0.2.2
+# github.com/diamondburned/gotk4/pkg v0.3.1
 ## explicit; go 1.21.0
 github.com/diamondburned/gotk4/pkg/cairo
 github.com/diamondburned/gotk4/pkg/cairo/swizzle
