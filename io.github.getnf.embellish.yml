@@ -36,7 +36,7 @@ modules:
         sha256: 3696106a070ff052cefec08d71f11bccd1b24f27eab96f7a209b23b4247f34e8
 
       - type: file
-        url: https://raw.githubusercontent.com/getnf/embellish/120af697123312361dddf134260936de166ac017/io.github.getnf.embellish.metainfo.xml
+        url: https://raw.githubusercontent.com/getnf/embellish/020373c5c83b9cda9d7121a76fb5cfcfafded2f2/io.github.getnf.embellish.metainfo.xml
         sha256: 3bbe244d675d6cb1abc210ef91bf1dfe8c7b4e301fe72be8a4eeae44006fb0c3
 
       - go.mod.yml
