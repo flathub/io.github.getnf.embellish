@@ -1,42 +1,41 @@
-id: io.github.getnf.embellish
+app-id: io.github.getnf.embellish
 runtime: org.gnome.Platform
-runtime-version: "46"
+runtime-version: '46'
 sdk: org.gnome.Sdk
-command: embellish
-
-sdk-extensions:
-  - org.freedesktop.Sdk.Extension.golang
+command: io.github.getnf.embellish
 
 finish-args:
   - --socket=wayland
   - --socket=fallback-x11
   - --share=ipc
+  - --device=dri
   - --share=network
   - --filesystem=~/.local/share/fonts:create
   - --filesystem=xdg-download:rw
-  - --device=dri
+  
+
+cleanup:
+  - /include
+  - /lib/pkgconfig
+  - /share/doc
+  - /share/man
+  - '*.a'
+  - '*.la'
+
 modules:
-  - name: embellish
-    buildsystem: simple
-    build-options:
-      append-path: /usr/lib/sdk/golang/bin
-      env:
-        GOBIN: /app/bin
-        GOROOT: /usr/lib/sdk/golang
-    build-commands:
-      - go install -v -tags=terminal,flatpak -ldflags "-s -w" -mod=vendor .
-      - mv $GOBIN/embellish $GOBIN/embellish-tui
-      - go install -v -tags=gui,flatpak -ldflags "-s -w" -mod=vendor .
-      - install -Dm644 $FLATPAK_ID.desktop /app/share/applications/$FLATPAK_ID.desktop
-      - install -Dm644 $FLATPAK_ID.svg /app/share/icons/hicolor/scalable/apps/$FLATPAK_ID.svg
-      - install -Dm644 $FLATPAK_ID.metainfo.xml /app/share/metainfo/$FLATPAK_ID.metainfo.xml
+  - name: gnome-autoar
+    buildsystem: meson
+    config-opts:
+      - -Dgtk_doc=false
     sources:
       - type: archive
-        url: https://github.com/getnf/embellish/archive/refs/tags/v0.3.0.tar.gz
-        sha256: 3696106a070ff052cefec08d71f11bccd1b24f27eab96f7a209b23b4247f34e8
+        url: https://download.gnome.org/sources/gnome-autoar/0.4/gnome-autoar-0.4.5.tar.xz
+        sha256: 838c5306fc38bfaa2f23abe24262f4bf15771e3303fb5dcb74f5b9c7a615dabe
 
-      - type: file
-        url: https://raw.githubusercontent.com/getnf/embellish/875d8758bc407c35c5aa60d7e607b844411ca23d/io.github.getnf.embellish.metainfo.xml
-        sha256: c81e758f32ecc52f31cc1e3e240f5c9c8a4cd878cb8eb93940515c676369475b
-
-      - go.mod.yml
+  - name: embellish
+    buildsystem: meson
+    sources:
+      - type: git
+        url: https://github.com/getnf/embellish.git
+        tag: v0.4.0
+        commit: 9936d451e6d5fe9e26bc28cd4de27d4d537e94c6
