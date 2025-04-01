@@ -1,6 +1,6 @@
 app-id: io.github.getnf.embellish
 runtime: org.gnome.Platform
-runtime-version: '47'
+runtime-version: '48'
 sdk: org.gnome.Sdk
 command: io.github.getnf.embellish
 
@@ -37,5 +37,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/getnf/embellish.git
-        tag: v0.4.5
-        commit: 6cf5116afe4b41c8eabac7b6651f7be168e4dbd0
+        tag: v0.4.6
+        commit: e2824f4785d9cfab641cc0c7bc38ee750e8f7918
