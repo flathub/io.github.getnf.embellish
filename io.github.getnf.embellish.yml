@@ -38,4 +38,4 @@ modules:
       - type: git
         url: https://github.com/getnf/embellish.git
         tag: v0.4.7
-        commit: 173e1d46a3beaad10fc3785fb2054e8133f313a7
+        commit: fea435784f4b618be6699c326d5a6f08c6f62d73
