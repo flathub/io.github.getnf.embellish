@@ -32,10 +32,19 @@ modules:
         url: https://download.gnome.org/sources/gnome-autoar/0.4/gnome-autoar-0.4.5.tar.xz
         sha256: 838c5306fc38bfaa2f23abe24262f4bf15771e3303fb5dcb74f5b9c7a615dabe
 
+  - name: blueprint-compiler
+    buildsystem: meson
+    cleanup:
+      - '*'
+    sources:
+      - type: git
+        url: https://gitlab.gnome.org/jwestman/blueprint-compiler
+        tag: v0.16.0
+
   - name: embellish
     buildsystem: meson
     sources:
       - type: git
         url: https://github.com/getnf/embellish.git
-        tag: v0.4.7
-        commit: fea435784f4b618be6699c326d5a6f08c6f62d73
+        tag: v0.5.0
+        commit: c374cb8f14018293fa915a9b96c4e39d6627bf67
